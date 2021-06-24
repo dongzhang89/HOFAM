@@ -27,7 +27,7 @@ The overall structure of our proposed Hierarchical Optical Flow Attention Model 
 You first need to download [checkpoint](https://drive.google.com/file/d/1RodI2WjeG7X28T1kSTRppGmvSX95CUO8/view?usp=sharing), and then place it in checkpoint/(here)
 
 
-## dataset prepare
+## Dataset prepare
 Refer to [selflow](https://github.com/ppliuboy/SelFlow) to calculate different optical flows
 ```sh
 Merge vidoe frame + hierarchical optical flow + ground truth like dataset/demo_data/test_000155.png
@@ -37,7 +37,7 @@ Prepare and Generate tfrecode file
 change data path and run tfrecode.py
 ```
 
-## train and test
+## Train and test
 parameters setting
 ```sh
 1. Change tfrecode file path in model.py line 137
@@ -52,7 +52,7 @@ start train or test
 $ run main.py
 ```
 
-## Ablation Results
+## Ablation results
 Hierarchical optical flow (orange border) and foreground segmentation results.
 ![](/show/hop.png)
 
@@ -63,7 +63,7 @@ Comparison results of foreground segmentation of
 small objects with different losses.
 ![](/show/seg_loss.png)
 
-## Cross-scene dataset Results
+## Cross-scene dataset results
 Comparison results of different model on crossscene dataset LIMU. Each column has five images and there are video frame, segmented results of HOFAM, PSPNet,
 DeepLabV3+ and STAM, from left to right. Green: False Positive, Red: False Negative.
 ![](/show/seg_limu.png)
