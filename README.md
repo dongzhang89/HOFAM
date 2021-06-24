@@ -6,7 +6,7 @@ Training a single model for cross-scene foreground segmentation is a challenging
 
 ****
 ## Introduction
-### Our work is based on our group accepeted work foreground segmentation model [STAM](https://www.mdpi.com/1424-8220/19/23/5142).
+### This work is based on our conference work [STAM](https://www.mdpi.com/1424-8220/19/23/5142).
 ### Code uses Tensorflow 1.13, CUDN 10.1.
 
 ![Video Frame / Ground True / Optical flow / Foreground segmentation Result](https://weizongqi.github.io/HOFAM/show/test_0055.png)
