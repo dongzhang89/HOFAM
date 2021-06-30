@@ -3,20 +3,20 @@
 ### Paper link will be given in a short time
 ### Author: Dong Liang, Zongqi Wei, Dong Zhang, Liyan Zhang, and Xiaoyang Tan
 
-Training a single model for cross-scene foreground segmentation is a challenging task, especially for the large-scale video surveillance, as the off-the-peg models heavily rely on the scene-specific information, such that deploying the recognition system on new scenes usually requires additional annotations and workloads. Besides, the existing optical flow usage mechanism can only represent instantaneous motion and is not robust to ambient lighting changes in the open set. In this paper, we aim to achieve scene adaptation for foreground segmentation via fine-grained motion feature representation and interaction. To this end, we first design a complementary mechanism, termed as hierarchical optical flows, to generate fine-grained motion features and train an attention module. Based on this, a dynamic feature filter to realize the motion and appearance feature interaction can be constructed. Compared to the existing methods, the proposed scheme tends to learn more semantic-level information between the motion patterns of the foreground and the background area, such that a better adaptability and robustness can be obtained. Moreover, since small objects are usually missed in cross-scene foreground segmentation tasks due to the training bias, we then design a class-in scale focal loss function to balances the diversity of foreground sizes. The proposed modules can plug-and-play into a arbitrary video surveillance framework to implement cross-scene foreground segmentation. Experimental results declare that our model can significantly outperform the existing state-of-the-art methods in a large margin.
+It is a challenging task by training a single model for cross-scene foreground segmentation, especially for large-scale video surveillance, as the off-the-peg models usually heavily rely on scene-specific information. Besides, the existing methods on optical flow mechanism can only represent instantaneous motion and are not robust to ambient changes in the open set. In this paper, we aim to achieve scene adaptation for foreground segmentation via fine-grained motion feature representations as well as interactions. To this end, we first design a new module, termed as hierarchical optical flows, to combine fine-grained motion features with an attention module. Based on this complementary mechanism, a cross-modal dynamic feature filter to realize the motion and appearance feature interaction can be constructed. Compared to the existing methods, our proposed module tends to learn more semantic information between the motion patterns of the foreground and the background area, such that better adaptability and robustness can be obtained. Moreover, since small objects are usually missed in the cross-scene foreground segmentation task due to the training bias, we further design a class-in scale focal loss function to balances the diversity of foreground instance sizes. The proposed modules can be plug-and-play into an arbitrary video surveillance recognition framework to improve the quality of cross-scene foreground segmentation masks. Experimental results on three benchmarks demonstrate that our model can significantly outperform the existing state-of-the-art methods by a large margin.
 
 ****
 ## Introduction
 ### This work is based on our conference work [STAM](https://www.mdpi.com/1424-8220/19/23/5142).
-### Code uses Tensorflow 1.13, CUDN 10.1.
+### Codes are based on Tensorflow 1.13 platform , CUDN 10.1.
 
 ![Video Frame / Ground True / Optical flow / Foreground segmentation Result](https://weizongqi.github.io/HOFAM/show/test_0055.png)
 
 ## Structure
-The overall structure of our proposed Hierarchical Optical Flow Attention Model (HOFAM).
+The overall architecture of our proposed Hierarchical Optical Flow Attention Model (HOFAM).
 ![HOFAM](/show/hofam.png)
 
- Comparison to the baseline on DOTA for oriented object detection with ResNet-101. The figures with blue boxes are the results of the baseline and pink boxes are the results of our proposed CG-Net.
+ Result comparisons to the baseline on DOTA dataset for oriented object detection with ResNet-101. The figures with blue boxes are the results of the baseline and pink boxes are the results of our proposed CG-Net.
 ![Attention module in HOFAM](/show/atten.png)
 
 ## Experiment
@@ -25,7 +25,7 @@ The overall structure of our proposed Hierarchical Optical Flow Attention Model 
 |:---:|:---:|:---:|:---:|:---:|
 |HOFAM|0.9466|0.9661|0.9893|0.9776|
 
-You first need to download [checkpoint](https://drive.google.com/file/d/1RodI2WjeG7X28T1kSTRppGmvSX95CUO8/view?usp=sharing), and then place it in checkpoint/(here)
+You first need to download [checkpoint](https://drive.google.com/file/d/1RodI2WjeG7X28T1kSTRppGmvSX95CUO8/view?usp=sharing), and then place it in checkpoint/...
 
 
 ## Dataset prepare
