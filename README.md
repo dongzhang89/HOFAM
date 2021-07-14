@@ -7,7 +7,6 @@ It is a challenging task by training a single model for cross-scene foreground s
 
 ****
 ## Introduction
-### This work is based on our conference work [STAM](https://www.mdpi.com/1424-8220/19/23/5142).
 ### Codes are based on Tensorflow 1.13 platform , CUDN 10.1.
 
 ![Video Frame / Ground True / Optical flow / Foreground segmentation Result](https://weizongqi.github.io/HOFAM/show/test_0055.png)
