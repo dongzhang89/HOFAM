@@ -4,8 +4,8 @@ This repository contains the official PyTorch implementation of the following pa
 
 #### Cross-scene Background Subtraction Network via 3D Optical Flow
 
-Dong Liang, Dong Zhang, Qiong Wang, Zongqi Wei, Liyan Zhang
-MUAA, NJUST, SIAT 
+Dong Liang, Dong Zhang, Qiong Wang, Zongqi Wei, Liyan Zhang  
+MUAA, NJUST, SIAT  
 https://ieeexplore.ieee.org/document/10100916
 
 ## Abstract 
