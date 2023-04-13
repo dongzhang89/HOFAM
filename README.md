@@ -1,9 +1,16 @@
-# Training Only One Deep Model for Cross-Scene Foreground Segmentation
+# CrossNet 
 
-### Paper link will be given in a short time
-### Author: Dong Liang, Zongqi Wei, Dong Zhang, Liyan Zhang, Han Sun, Xiaoyang Tan, and Huiyu Zhou
+This repository contains the official PyTorch implementation of the following paper:
 
-It is a challenging task by training a single model for cross-scene foreground segmentation, especially for large-scale video surveillance, as the off-the-peg models usually heavily rely on scene-specific information. Besides, the existing methods on optical flow mechanism can only represent instantaneous motion and are not robust to ambient changes in the open set. In this paper, we aim to achieve scene adaptation for foreground segmentation via fine-grained motion feature representations as well as interactions. To this end, we first design a new module, termed as hierarchical optical flows, to combine fine-grained motion features with an attention module. Based on this complementary mechanism, a cross-modal dynamic feature filter to realize the motion and appearance feature interaction can be constructed. Compared to the existing methods, our proposed module tends to learn more semantic information between the motion patterns of the foreground and the background area, such that better adaptability and robustness can be obtained. Moreover, since small objects are usually missed in the cross-scene foreground segmentation task due to the training bias, we further design a class-in scale focal loss function to balances the diversity of foreground instance sizes. The proposed modules can be plug-and-play into an arbitrary video surveillance recognition framework to improve the quality of cross-scene foreground segmentation masks. Experimental results on three benchmarks demonstrate that our model can significantly outperform the existing state-of-the-art methods by a large margin.
+#### Cross-scene Background Subtraction Network via 3D Optical Flow
+
+Dong Liang, Dong Zhang, Qiong Wang, Zongqi Wei, Liyan Zhang
+MUAA, NJUST, SIAT 
+https://ieeexplore.ieee.org/document/10100916
+
+## Abstract 
+<p align="justify">
+This paper investigates an intriguing yet unsolved problem of cross-scene background subtraction for training only one deep model to process large-scale video streaming. We propose an end-to-end cross-scene background subtraction network via 3D optical flow, dubbed CrossNet. First, we design a new motion descriptor, hierarchical 3D optical flows (3D-HOP), to observe fine-grained motion. Then, we build a cross-modal dynamic feature filter (CmDFF) to enable the motion and appearance feature interaction. CrossNet exhibits better generalization since the proposed modules are encouraged to learn more discriminative semantic information between the foreground and the background. Furthermore, we design a loss function to balance the size diversity of foreground instances since small objects are usually missed due to training bias. Our whole background subtraction model is called Hierarchical Optical Flow Attention Model (HOFAM). Unlike most of the existing stochastic-process-based and CNN-based background subtraction models, HOFAM will avoid inaccurate online model updating, not heavily rely on scene-specific information, and well represent ambient motion in the open world. Experimental results on several well-known benchmarks demonstrate that it outperforms state-of-the-art by a large margin. The proposed framework can be flexibly integrated into arbitrary streaming media systems in a plug-and-play form.
 
 ****
 ## Introduction
@@ -11,7 +18,7 @@ It is a challenging task by training a single model for cross-scene foreground s
 
 ![Video Frame / Ground True / Optical flow / Foreground segmentation Result](https://weizongqi.github.io/HOFAM/show/test_0055.png)
 
-## Structure
+## The overall architecture
 The overall architecture of our proposed Hierarchical Optical Flow Attention Model (HOFAM).
 ![HOFAM](/show/hofam.png)
 
